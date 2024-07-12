@@ -1,0 +1,326 @@
+body {
+  margin: 0;
+  height: 100;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: Arial, sans-serif;
+  background: linear-gradient(45deg, #5288c5, #e4e713, #6c04d5, rgb(190, 131, 42));
+  background-size: 400% 400%;
+  animation: gradientAnimation 5s ease infinite;
+}
+
+@keyframes gradientAnimation {
+  0% {
+      background-position: 0% 50%;
+  }
+  50% {
+      background-position: 100% 50%;
+  }
+  100% {
+      background-position: 0% 50%;
+  }
+}
+
+.content {
+  color: white;
+  text-align: center;
+}
+  
+
+.Label1 {
+  font-size: 24px;
+  font-weight: bold;
+  font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  color: #6c049f; 
+  text-align: center;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  padding: 10px;
+  background-color: #f0f0f075; 
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+  transition: color 0.3s ease, background-color 0.3s ease; 
+}
+
+.Label1:hover {
+  color: #fff; 
+  background-color: #e4e1297c; 
+}
+.task-update {
+width: 100%;
+}
+
+.App {
+  width: 90%;
+  max-width: 420px;
+  background-color: #ffffff00;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  box-sizing: border-box; 
+}
+.selectBox {
+  background: grey;
+  color: white;
+  padding: 10px;
+  font-weight: bold;
+}
+.optionsMenu {
+  background: lightcoral;
+  padding: 10px;
+  font-weight: bold;
+}
+.textToChange {
+  color: blueviolet;
+  font-weight: bold;
+}
+.TaskTitle {
+  font-size: 32px;
+  font-weight: bold;
+  color: #fff;
+  text-align: center;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  padding: 15px;
+  background-color: #33333321;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+  border: 2px solid #4440;
+  cursor: pointer;
+}
+
+
+.task-container {
+  display: none;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  margin-top: 20px;
+  max-height: 400px;
+  overflow-y: auto; 
+}
+
+.task-item {
+  padding: 10px;
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  margin-bottom: 10px;
+}
+
+.TaskCreate {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.task-label {
+  font-size: 16px;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  margin-bottom: 5px;
+  margin-top: 10px;
+  text-align: center;
+  color: #4b0082; 
+  background-color: #f4f0ff5f;
+  padding: 10px;
+  border: 2px solid #d3c4e300; 
+  border-radius: 8px; 
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
+  transition: background-color 0.3s ease, color 0.3s ease; 
+}
+
+.task-label:hover {
+  background-color: #6a0dad6b; 
+  color: #fff; 
+}
+
+
+.task-input {
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid rgba(128, 0, 128, 0.7); 
+  border-radius: 8px;
+  margin-bottom: 10px;
+  width: 100%;
+  box-sizing: border-box;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  background-color: rgba(255, 255, 255, 0.5); 
+  backdrop-filter: blur(5px); 
+}
+
+.task-input:focus {
+  border-color: rgba(138, 43, 226, 0.8); 
+  box-shadow: 0 0 8px rgba(138, 43, 226, 0.5); 
+}
+
+
+.task-button {
+  padding: 10px;
+  font-size: 16px;
+  color: #fff;
+  background-color: #7d0aaf;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-top: 10px;
+  width: 100%;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.task-button:hover {
+  background-color: #d9b500;
+  transform: scale(1.05); 
+}
+.update-button {
+
+background-color: rgba(223, 223, 21, 0.857);
+
+}
+
+.TaskList {
+  text-align: left;
+}
+
+.task-item {
+  padding: 10px;
+  background-color: #fafafa;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  margin-bottom: 10px;
+}
+
+.task-show {
+  background-color: rgba(255, 255, 255, 0.335);
+  padding: 20px;
+  color: white;
+  border: 1px solid rgba(0, 128, 0, 0);
+  border-radius: 30px;
+  margin: 20px;
+  flex: 1 1 300px; 
+  box-sizing: border-box; 
+}
+.task-list {
+
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.button-1 {
+
+  padding: 5px;
+  font-size: 15px;
+  width: 60px;
+  margin: 12px;
+border: none;
+border-radius: 30px;
+background-color: red;
+color: white;
+}
+.button-2 {
+
+  padding: 5px;
+  font-size: 15px;
+  width: 12* px;
+  margin: 14px;
+  border: none;
+border-radius: 30px;
+background-color: green;
+color: white;
+}
+
+
+.task-buttons {
+
+  display: flex;
+  flex-wrap: inherit;
+
+
+}
+.button-1 {
+  border-radius: 4px;
+  background-color: #8205ac;
+  border: none;
+  color: #fff;
+  text-align: center;
+  font-size: 15px;
+  padding: 12px;
+  width: 60px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 36px;
+  box-shadow: 0 10px 20px -8px rgba(0, 0, 0,.7);
+}
+
+.button-1 {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.button-1:after {
+  content: '»';
+  position: absolute;
+  opacity: 0;  
+  top: 10px;
+  right: -12px;
+  transition: 0.5s;
+}
+
+.button-1:hover{
+  background-color: red;
+  padding-right: 24px;
+  padding-left:8px;
+}
+
+.button-1:hover:after {
+  opacity: 1;
+  right: 10px;
+}
+.button-2 {
+  border-radius: 4px;
+  background-color: #7d0aaf;
+  border: none;
+  color: #fff;
+  text-align: center;
+  font-size: 15px;
+  padding: 12px;
+  width: 120px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 36px;
+  box-shadow: 0 10px 20px -8px rgba(0, 0, 0,.7);
+}
+
+.button-2 {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.button-2:after {
+  content: '»';
+  position: absolute;
+  opacity: 0;  
+  top: 10px;
+  right: -12px;
+  transition: 0.5s;
+}
+
+.button-2:hover{
+  background-color: #018b2c;
+  padding-right: 24px;
+  padding-left:8px;
+}
+
+.button-2:hover:after {
+  opacity: 1;
+  right: 10px;
+}
+
